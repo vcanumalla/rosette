@@ -6,8 +6,9 @@
          rosette/solver/smt/boolector 
          rosette/solver/smt/cvc5
          rosette/solver/smt/bitwuzla
+         rosette/solver/smt/stp
+         rosette/solver/smt/yices-smt2
          "config.rkt")
-
 (error-print-width default-error-print-width)
 
 
@@ -91,6 +92,12 @@
   (when (bitwuzla-available?)
     (printf "===== Running bitwuzla tests =====\n")
     (run-tests-with-solver bitwuzla))
+  (when (stp-available?)
+    (printf "===== Running stp tests =====\n")
+    (run-tests-with-solver stp))
+  (when (yices-smt2-available?)
+    (printf "===== Running yices-smt2 tests =====\n")
+    (run-tests-with-solver yices-smt2))
 )
 
 (module+ test

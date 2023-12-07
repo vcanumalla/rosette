@@ -1,7 +1,7 @@
 #lang racket
 
 (require rackunit rackunit/text-ui racket/generator (rename-in rackunit [check-exn rackunit/check-exn])
-         rosette/solver/solution 
+         rosette/solver/solution
          rosette/lib/roseunit rosette/solver/smt/boolector
          racket/fixnum 
          rosette/base/core/term
@@ -26,7 +26,6 @@
 (define maxval+1 (expt 2 (sub1 (bitvector-size BV)))) 
 (define maxval (sub1 maxval+1))
 (define (bv v [t BV]) (@bv v t))
-
 (define-syntax-rule (check-exn e ...)
   (begin
     (rackunit/check-exn e ...)
