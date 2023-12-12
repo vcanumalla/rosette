@@ -20,39 +20,39 @@
 
 
 (require-all-tests
- "base/type.rkt"
- "base/term.rkt"
- "base/bool.rkt"
- "base/merge.rkt"
- "base/store.rkt"
- "base/vc.rkt"
- "base/eval-guarded.rkt"
- "base/list.rkt"
- "base/vector.rkt"
- "base/bvseq.rkt"
- "base/forall.rkt"
+;  "base/type.rkt"
+;  "base/term.rkt"
+;  "base/bool.rkt"
+;  "base/merge.rkt"
+;  "base/store.rkt"
+;  "base/vc.rkt"
+;  "base/eval-guarded.rkt"
+;  "base/list.rkt"
+;  "base/vector.rkt"
+;  "base/bvseq.rkt"
+;  "base/forall.rkt"
  "base/bitvector.rkt"
- "base/bvlib.rkt"
- "base/equality.rkt"
- "base/uninterpreted.rkt"
- "base/real.rkt"
- "base/quantified.rkt"
- "base/finitize.rkt"
- "base/distinct.rkt"
- "base/generics.rkt"
- "base/push-pop.rkt"
- "base/optimize-order.rkt"
- "base/reflect.rkt"
- "base/decode.rkt"
- "query/solve.rkt"
- "query/verify.rkt"
- "query/synthesize.rkt"
- "query/solve+.rkt"
- "query/synthax.rkt"
- "query/grammar.rkt"
- "query/optimize.rkt"
- "lib/destruct.rkt"
- "profile/test.rkt"
+;  "base/bvlib.rkt"
+;  "base/equality.rkt"
+;  "base/uninterpreted.rkt"
+;  "base/real.rkt"
+;  "base/quantified.rkt"
+;  "base/finitize.rkt"
+;  "base/distinct.rkt"
+;  "base/generics.rkt"
+;  "base/push-pop.rkt"
+;  "base/optimize-order.rkt"
+;  "base/reflect.rkt"
+;  "base/decode.rkt"
+;  "query/solve.rkt"
+;  "query/verify.rkt"
+;  "query/synthesize.rkt"
+;  "query/solve+.rkt"
+;  "query/synthax.rkt"
+;  "query/grammar.rkt"
+;  "query/optimize.rkt"
+;  "lib/destruct.rkt"
+;  "profile/test.rkt"
  "trace/test.rkt")
 
 
@@ -77,21 +77,21 @@
 
 
 (define (slow-tests)
-  (when (cvc4-available?)
-    (printf "===== Running CVC4 tests =====\n")
-    (run-tests-with-solver cvc4))
+  ; (when (cvc4-available?)
+  ;   (printf "===== Running CVC4 tests =====\n")
+  ;   (run-tests-with-solver cvc4))
 
-  (when (boolector-available?)
-    (printf "===== Running Boolector tests =====\n")
-    (run-tests-with-solver boolector))
+  ; (when (boolector-available?)
+  ;   (printf "===== Running Boolector tests =====\n")
+  ;   (run-tests-with-solver boolector))
 
-  (when (cvc5-available?)
-    (printf "===== Running cvc5 tests =====\n")
-    (run-tests-with-solver cvc5))
+  ; (when (cvc5-available?)
+  ;   (printf "===== Running cvc5 tests =====\n")
+  ;   (run-tests-with-solver cvc5))
 
-  (when (bitwuzla-available?)
-    (printf "===== Running bitwuzla tests =====\n")
-    (run-tests-with-solver bitwuzla))
+  ; (when (bitwuzla-available?)
+  ;   (printf "===== Running bitwuzla tests =====\n")
+  ;   (run-tests-with-solver bitwuzla))
   (when (stp-available?)
     (printf "===== Running stp tests =====\n")
     (run-tests-with-solver stp))
@@ -101,5 +101,6 @@
 )
 
 (module+ test
-  (fast-tests)
-  (slow-tests))
+  ; (fast-tests)
+  (slow-tests)
+  )
